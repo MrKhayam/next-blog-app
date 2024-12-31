@@ -1,10 +1,15 @@
 import mongoose from "mongoose";
-import 'dotenv';
-const connectionUri = process.env.MONGO_URI;
 
 const connectDB = async () => {
-    await mongoose.connect(connectionUri);
+  try {
+    await mongoose.connect(
+      "mongodb+srv://khayam:anamkhayam@next-blog.w9mc8.mongodb.net/"
+    );
     console.log(`Database Connected at host: ${mongoose.connection.host}`);
+  } catch (error) {
+    console.error("Error connecting to the database:", error);
+  }
 };
+
 
 export default connectDB;
