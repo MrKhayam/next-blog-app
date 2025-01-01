@@ -2,7 +2,6 @@ import Link from 'next/link';
 import React from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
 
-
 const page = () => {
   return (
     <>
@@ -12,7 +11,7 @@ const page = () => {
         </h1>
         <Link
           className="mt-5 px-6 py-2 transition-all duration-300 hover:gap-4 hover:bg-[#faf5f5] items-center flex gap-2 rounded bg-white text-black"
-          href="/blogs"
+          href="/home"
         >
           Explore Blogs <FaArrowRightLong size={15} color='black' cursor="pointer" />
         </Link>

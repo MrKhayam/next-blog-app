@@ -16,3 +16,58 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+.no-scrollbar {
+  overflow: hidden; 
+}
+
+.hide-scrollbar {
+  overflow: auto;
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+
+/* Apply scrollbar styles globally */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height of the scrollbar (horizontal) */
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4; /* Track color */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #6a5acd, #7b68ee); /* Gradient thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  border: 3px solid #f4f4f4; /* Adds padding effect */
+}
+
+/* For Firefox (fallback) */
+* {
+  scrollbar-width: thin; /* Makes the scrollbar thin */
+  scrollbar-color: #5f5f5f #18181b; /* Thumb color | Track color */
+}
+
+/* Optional: Target specific scrollable elements */
+.scrollable-element {
+  scrollbar-width: thin;
+  scrollbar-color: #5f5f5f #18181b;
+}
+
+/* Add padding and smooth scrolling */
+body {
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
