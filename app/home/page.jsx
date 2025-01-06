@@ -32,7 +32,7 @@ const page = async () => {
             <AllBlogs blogs={blogList} />
           </div>
           <div className="right md:w-[30%] w-0 md:p-7 h-full md:h-[91.3vh] bg-zinc-900">
-            <AddBlog />
+            <AddBlog blogs={blogList} />
           </div>
         </div>
       </div>
